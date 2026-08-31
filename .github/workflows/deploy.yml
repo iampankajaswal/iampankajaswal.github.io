@@ -1,0 +1,57 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Least privilege: read the repo, mint an OIDC token for the Pages deployment.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deployments at once, but let a newer push finish rather than
+# cancelling it — a half-deployed site is worse than a slightly stale one.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    name: Validate HTML and links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check HTML, internal links and accessibility hints
+        uses: chabad360/htmlproofer@master
+        with:
+          directory: .
+          arguments: >-
+            --check-html
+            --check-favicon
+            --disable-external
+            --allow-hash-href
+
+  deploy:
+    name: Deploy
+    needs: validate
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
