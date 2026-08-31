@@ -29,8 +29,7 @@ jobs:
         with:
           directory: .
           arguments: >-
-            --check-html
-            --check-favicon
+            --checks Links,Images,Scripts
             --disable-external
             --allow-hash-href
 
