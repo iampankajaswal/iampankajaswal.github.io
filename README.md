@@ -88,7 +88,7 @@ boilerplate. This also makes the site fast and keeps it working offline.
 
 **Metric-first, understated tone.** European CV convention rewards evidence over
 self-description. Every number on the page carries the context that makes it meaningful.
-`<50 min downtime` is unremarkable until you know it covered regulated banking workloads.
+`<20 min downtime` is unremarkable until you know it covered regulated banking workloads.
 
 **Print stylesheet.** ⌘P produces a clean, ATS-parseable CV with expanded link targets
 and no page-break orphans. Recruiters do print.
@@ -104,9 +104,10 @@ anything on those tiles, so using it there would be decoration masquerading as m
 
 ## Before you publish, check these
 
-- [ ] Resolve the downtime figure. The CV says under 20 minutes in Selected Projects and
-      Key Achievements, but under 50 minutes in Recognition and Impact. The site currently
-      says 20. Fix the CV so all three agree.
+- [x] Downtime figure resolved. All three mentions in the CV now read *less than 20 minutes
+      downtime*, matching the site. The CV source of truth is
+      `~/Downloads/Pankaj_Resume_SRE_DevOps.docx`, and the committed PDF is exported from it
+      via Word. Edit the docx, never the PDF, then re-export.
 - [ ] Decide whether an AWS certification can be evidenced. It is on neither the CV nor the
       site right now. Add it to both, with credential ID, or to neither.
 - [ ] Update the `canonical` and `og:url` URLs to your real domain
