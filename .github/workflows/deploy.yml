@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 # Never run two deployments at once, but let a newer push finish rather than
-# cancelling it — a half-deployed site is worse than a slightly stale one.
+# cancelling it. A half-deployed site is worse than a slightly stale one.
 concurrency:
   group: pages
   cancel-in-progress: false

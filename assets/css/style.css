@@ -1,5 +1,5 @@
 /* ============================================================
-   Pankaj Aswal — portfolio
+   Pankaj Aswal, portfolio
    Palette roles follow the validated reference instance:
    light surface #fcfcfb / page #f9f9f7, dark surface #1a1a19 / page #0d0d0d.
    Numbers and labels wear text tokens, never the accent hue.
@@ -335,7 +335,7 @@ a:hover { color: var(--accent); }
 .footer__links { display: flex; flex-wrap: wrap; gap: .5rem; font-size: .82rem; color: var(--muted); }
 
 /* ============================================================
-   Print — the page doubles as a clean, ATS-friendly CV
+   Print. The page doubles as a clean, ATS-friendly CV
    ============================================================ */
 @media print {
   :root {

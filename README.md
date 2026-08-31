@@ -1,4 +1,4 @@
-# Portfolio — Pankaj Aswal
+# Portfolio, Pankaj Aswal
 
 Static portfolio site for senior DevOps / SRE / platform engineering applications in Europe.
 No framework, no build step, no dependencies. Three files do the work.
@@ -69,22 +69,22 @@ norms in particular) discourages photos on applications. German employers are mo
 tolerant of them, but omitting one is never penalised while including one can be.
 
 **Certifications and Courses are separate sections.** AWS Certified Solutions Architect
-is a certification. *Claude Code in Action* is a certificate of completion — a course.
+is a certification. *Claude Code in Action* is a certificate of completion, meaning a course.
 EU recruiters do verify credentials, and conflating the two reads as padding. The course
 carries its verification link so the claim is checkable.
 
 **Work eligibility stated up front.** European recruiters screen on eligibility, location
 and notice period before they read anything technical. Burying it wastes their time and
-yours. The EU Blue Card framing is accurate — a recognised engineering degree plus 10+ years
-of relevant experience — and signals that sponsorship is a known, routine path rather than
-an open question.
+yours. The EU Blue Card framing is accurate, resting on a recognised engineering degree plus
+10+ years of relevant experience, and it signals that sponsorship is a known, routine path
+rather than an open question.
 
 **GDPR-clean by construction.** Zero cookies, zero analytics, zero third-party requests,
 no external fonts. The privacy notice is therefore short and truthful instead of
 boilerplate. This also makes the site fast and keeps it working offline.
 
 **Metric-first, understated tone.** European CV convention rewards evidence over
-self-description. Every number on the page carries the context that makes it meaningful —
+self-description. Every number on the page carries the context that makes it meaningful.
 `<50 min downtime` is unremarkable until you know it covered regulated banking workloads.
 
 **Print stylesheet.** ⌘P produces a clean, ATS-parseable CV with expanded link targets
@@ -96,10 +96,10 @@ Light and dark palettes are both explicitly selected, not derived by inverting o
 the other. Dark values are declared under both `prefers-color-scheme` and `[data-theme]`
 so the on-page toggle wins over the OS setting in either direction.
 
-Stat tile values sit in primary ink rather than the accent hue — colour is not encoding
+Stat tile values sit in primary ink rather than the accent hue. Colour is not encoding
 anything on those tiles, so using it there would be decoration masquerading as meaning.
 
-## Before you publish — check these
+## Before you publish, check these
 
 - [ ] Copy a CV PDF into `portfolio/` (see above) or repoint the two links
 - [ ] Confirm the exact AWS certification name matches your credential, and consider
