@@ -371,3 +371,4 @@ a:hover { color: var(--accent); }
   .contactlist a::after, .verify::after { content: " (" attr(href) ")"; font-size: 8pt; color: var(--muted); }
   .contactlist a[href^="mailto:"]::after, .contactlist a[href^="tel:"]::after { content: ""; }
 }
+
