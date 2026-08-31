@@ -45,14 +45,15 @@ update the `<link rel="canonical">` and `og:url` values in both HTML files.
 
 ## Attach your CV
 
-Both the hero button and the contact list link to `Pankaj_Aswal_DevOps_CloudNative.pdf`.
-Copy your preferred PDF from the parent directory into `portfolio/` under that name:
+Both the hero button and the contact list link to `Pankaj_Resume_SRE_DevOps.pdf`, which is
+committed alongside the site. To swap in a newer version, overwrite that file and keep the
+name the same so no links need editing:
 
 ```bash
-cp ../Pankaj_Aswal_DevOps_CloudNative.pdf .
+cp ~/Downloads/Pankaj_Resume_SRE_DevOps.pdf .
 ```
 
-Or point the two `href` values at whichever generated PDF you want to serve. Note that
+If you do rename it, update the two `href` values in `index.html`. Note that
 the site's own print stylesheet already produces a clean CV via ⌘P → Save as PDF, so
 the download is a convenience rather than a requirement.
 
@@ -68,10 +69,12 @@ working language of EU tech hiring.
 norms in particular) discourages photos on applications. German employers are more
 tolerant of them, but omitting one is never penalised while including one can be.
 
-**Certifications and Courses are separate sections.** AWS Certified Solutions Architect
-is a certification. *Claude Code in Action* is a certificate of completion, meaning a course.
-EU recruiters do verify credentials, and conflating the two reads as padding. The course
-carries its verification link so the claim is checkable.
+**Courses is its own section, and there is no Certifications section.** The CV lists only
+*Claude Code in Action*, which is a certificate of completion rather than a certification,
+so it sits under Courses with its verification link attached. If an AWS certification gets
+confirmed, add a Certifications block above Courses rather than merging the two. EU
+recruiters do verify credentials, and conflating a course with a certification reads as
+padding.
 
 **Work eligibility stated up front.** European recruiters screen on eligibility, location
 and notice period before they read anything technical. Burying it wastes their time and
@@ -101,9 +104,11 @@ anything on those tiles, so using it there would be decoration masquerading as m
 
 ## Before you publish, check these
 
-- [ ] Copy a CV PDF into `portfolio/` (see above) or repoint the two links
-- [ ] Confirm the exact AWS certification name matches your credential, and consider
-      adding the credential ID and issue date the way the course entry does
+- [ ] Resolve the downtime figure. The CV says under 20 minutes in Selected Projects and
+      Key Achievements, but under 50 minutes in Recognition and Impact. The site currently
+      says 20. Fix the CV so all three agree.
+- [ ] Decide whether an AWS certification can be evidenced. It is on neither the CV nor the
+      site right now. Add it to both, with credential ID, or to neither.
 - [ ] Update the `canonical` and `og:url` URLs to your real domain
 - [ ] Update the German level if it moves past A2
 - [ ] Revise the two `Last updated` dates when you next edit content
